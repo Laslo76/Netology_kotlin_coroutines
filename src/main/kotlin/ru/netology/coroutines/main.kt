@@ -37,9 +37,7 @@ fun main() {
                             PostTotals(post, getComments(client, post.id), getAuthors(client, post.authorId))
                         }
                     }.awaitAll()
-                    .map { post ->
-                        println(post)
-                    }
+                    .map { post -> println(post)}
             } catch (e: Exception) {
                 e.printStackTrace()
             }
